@@ -1,7 +1,9 @@
 title: Linjie Zhang
 name: Linjie Zhang
 description: Robotics | Control | AI Systems
+
 url: "https://linjiez-png.github.io"
+baseurl: "/portfolio"
 
 remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 
@@ -13,11 +15,3 @@ author:
   avatar: "/assets/images/profile.png"
   bio: "Mechanical Engineer | Robotics, Control, and AI"
   location: "Carnegie Mellon University"
-
-nav:
-  - title: "Home"
-    url: /
-  - title: "Projects"
-    url: /projects/
-  - title: "Resume"
-    url: /resume/
