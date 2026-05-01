@@ -16,7 +16,7 @@ Legged robots often suffer reduced mobility on mixed terrains because a single f
 
 The system integrates mechanical design, acoustic sensing, and machine learning to improve locomotion performance across wood, wet acrylic, and gravel surfaces.
 
-<img src="/portfolio/assets/images/bio/f1.png" width="700">
+<img src="/portfolio/assets/images/Bio/f1.png" width="700">
 
 *Figure: Overall system setup and experimental platform.*
 
@@ -41,7 +41,7 @@ The system consists of three major components:
 - Contact microphone for structure-borne vibration
 - Signal processing + machine learning classification pipeline
 
-<img src="/portfolio/assets/images/bio/f2.png" width="600">
+<img src="/portfolio/assets/images/Bio/f2.png" width="600">
 
 *Figure: Sole switching mechanism and mechanical design.*
 
@@ -58,7 +58,7 @@ The terrain-adaptive system operates in a closed-loop manner:
 5. Execute walking steps  
 6. Repeat  
 
-<img src="/portfolio/assets/images/bio/f3.png" width="650">
+<img src="/portfolio/assets/images/Bio/f3.png" width="650">
 
 *Figure: Control logic for terrain-aware sole switching.*
 
@@ -106,7 +106,7 @@ Metrics:
 - Cycles per distance  
 - Slip count  
 
-<img src="/portfolio/assets/images/bio/f4.png" width="650">
+<img src="/portfolio/assets/images/Bio/f4.png" width="650">
 
 *Figure: Sole morphologies used for different terrains.*
 
@@ -122,7 +122,7 @@ The adaptive system consistently outperforms the fixed flat-sole baseline:
 - Fewer gait cycles per distance  
 - Improved locomotion efficiency  
 
-<img src="/portfolio/assets/images/bio/f5.png" width="750">
+<img src="/portfolio/assets/images/Bio/f5.png" width="750">
 
 *Figure: Performance comparison between adaptive and fixed sole systems.*
 
