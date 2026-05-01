@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Surface-Adaptive Robotic Foot"
-permalink: /robotic-foot/
+permalink: /portfolio/robotic-foot/
 ---
 
 # Surface-Adaptive Robotic Foot with Acoustic Terrain Classification
