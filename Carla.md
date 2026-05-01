@@ -10,9 +10,27 @@ permalink: /carla/
 
 ## Overview
 
-This project develops a closed-loop simulation framework in CARLA to study autonomous driving in highly interactive scenarios, including unprotected left turns, highway merging, and sudden cut-ins.
+This project develops a closed-loop autonomous driving system in CARLA for highly interactive scenarios, including unprotected left turns, highway merging, and sudden cut-ins.
 
-We compare a classical rule-based planning pipeline with a reinforcement learning (PPO) planner that generates short-horizon trajectories while keeping the low-level PID controller fixed. :contentReference[oaicite:0]{index=0}
+The core objective is to compare a classical rule-based planner with a reinforcement learning (PPO) planner, while keeping the low-level controller fixed. This isolates the impact of learning-based decision making in complex driving interactions.
+
+---
+
+## My Contribution
+
+### PPO Reward Design and Tuning
+- Designed and refined the PPO reward function to balance safety, efficiency, and progress  
+- Tuned reward components for collision avoidance, trajectory tracking, and task completion  
+- Diagnosed training issues such as idling and unstable behavior, and improved convergence through reward shaping  
+
+### Scenario and Baseline Design
+- Contributed to the design of evaluation scenarios, including left-turn, merging, and cut-in cases  
+- Configured traffic parameters such as aggressiveness, density, and headway  
+- Evaluated baseline Behavior Agent performance under different configurations  
+
+### System Integration
+- Integrated PPO planner into the CARLA pipeline with a fixed PID controller  
+- Assisted debugging simulation setup and evaluation scripts  
 
 ---
 
@@ -20,13 +38,15 @@ We compare a classical rule-based planning pipeline with a reinforcement learnin
 
 The system follows a hybrid autonomy pipeline:
 
-- Global Planner: A* route planning for long-horizon navigation  
-- Local Planner:  
+- **Global Planner**: A* route planning for long-horizon navigation  
+- **Local Planner**:  
   - Baseline: rule-based waypoint planner  
   - RL: PPO-based short-horizon trajectory generator  
-- Controller: fixed PID controller for tracking  
+- **Controller**: fixed PID controller for trajectory tracking  
 
-<img src="/portfolio/assets/images/Carla/carla_arch.png" width="700">
+<p align="center">
+  <img src="/portfolio/assets/images/carla/carla_arch.png" width="700">
+</p>
 
 This design isolates improvements at the planning level without modifying control behavior.
 
@@ -34,68 +54,31 @@ This design isolates improvements at the planning level without modifying contro
 
 ## Scenarios
 
-### Unprotected Left Turn
-- Ego must cross oncoming traffic  
-- Requires gap selection and commit-or-yield decision  
+The system is evaluated under three interactive driving scenarios:
 
-### Highway Merge
-- Ego merges into dense traffic flow  
-- Requires coordination of speed and timing  
+- **Unprotected Left Turn**  
+  Ego vehicle must cross oncoming traffic, requiring gap selection and yield decisions  
 
-### Sudden Cut-In
-- NPC performs TTC-triggered lane change  
-- Tests robustness under abrupt interaction  
+- **Highway Merge**  
+  Ego vehicle merges into dense traffic flow, requiring coordination of speed and timing  
 
----
-
-## Baseline System
-
-The baseline uses a classical modular pipeline:
-
-- A* global routing  
-- Rule-based local planning  
-- PID tracking  
-
-Two behavior modes were tested:
-
-| Parameter | Normal | Aggressive |
-|----------|--------|-----------|
-| Max Speed | 50 km/h | 70 km/h |
-| Safety Distance | 10 m | 8 m |
-| Braking Distance | 5 m | 4 m |
-
-Aggressive mode reduces safety margins and delays braking, leading to riskier behavior.
+- **Sudden Cut-In**  
+  NPC performs a TTC-triggered lane change, testing robustness under abrupt interactions  
 
 ---
 
-## Key Baseline Findings
+## Baseline vs RL Planner
 
-- Success rate ranges from 73% to 86% across scenarios  
-- Left-turn scenarios are more difficult than highway merging  
-- Performance is sensitive to traffic aggressiveness  
+The baseline system uses a classical modular pipeline with rule-based planning, while the RL system replaces the local planner with a PPO policy that generates short-horizon trajectories.
 
-A key observation from the cut-in experiment:
-
-- At 70 km/h: safe behavior  
-- At 90 km/h: collision  
-
-This indicates that reactive PID-based control fails under high closing speeds.
-
----
-
-## PPO Planner
-
-We replace the rule-based local planner with a PPO policy:
-
-- Generates short-horizon trajectories and target speed  
-- Anchored to a global route  
+The PPO planner:
+- Outputs trajectory adjustments and target speed  
 - Re-plans at every timestep  
+- Is anchored to the global route  
 
-### Trajectory Representation
-
-<img src="/portfolio/assets/images/Carla/trajectory.png" width="600">
-
-The policy outputs lateral offsets and a reconnection bias, which are converted into smooth trajectories using spline interpolation. This formulation focuses learning on planning rather than low-level control.
+<p align="center">
+  <img src="/portfolio/assets/images/carla/trajectory.png" width="600">
+</p>
 
 ---
 
@@ -103,49 +86,26 @@ The policy outputs lateral offsets and a reconnection bias, which are converted 
 
 ### Highway Merge Performance
 
-<img src="/portfolio/assets/images/Carla/success_rate.png" width="600">
+<p align="center">
+  <img src="/portfolio/assets/images/carla/success_rate.png" width="600">
+</p>
 
 | Method | Success Rate | Crash Rate | P90 Time | P90 Jerk |
-|-------|-------------|-----------|----------|---------|
+|--------|-------------|-----------|----------|----------|
 | Baseline (Aggressive) | 83% | 17% | 11.6 s | 446 |
 | PPO | 86% | 10% | 17.4 s | 547 |
 
 ---
 
-## Interpretation
-
-- PPO improves success rate and reduces crash rate  
-- PPO introduces higher jerk, indicating more aggressive corrections  
-- There is a clear trade-off between safety, efficiency, and comfort  
-
----
-
 ## Key Insights
 
-- Rule-based planners struggle in highly interactive scenarios due to reactive logic  
-- RL improves adaptability but requires structured design  
-- Hybrid planning (A* + PPO) provides both stability and flexibility  
-- Short-horizon trajectory learning is effective for interaction-heavy driving  
-
----
-
-## Limitations
-
-- PPO still produces high jerk in challenging scenarios  
-- Limited generalization across different tasks  
-- Uses simulator ground-truth state instead of perception inputs  
-
----
-
-## Future Work
-
-- Introduce sensor noise for robustness testing  
-- Extend PPO to left-turn and cut-in scenarios  
-- Improve smoothness and merge timing  
-- Transition toward perception-based inputs  
+- RL improves success rate and reduces crash rate in interactive scenarios  
+- Learning-based planners adapt better than rule-based systems under uncertainty  
+- There is a trade-off between safety, efficiency, and comfort (higher jerk in PPO)  
+- Hybrid architecture (A* + PPO + PID) balances stability and adaptability  
 
 ---
 
 ## Takeaway
 
-This project demonstrates a hybrid autonomous driving system combining classical planning and reinforcement learning. It shows how learning-based planners can improve decision-making in complex interactive scenarios while maintaining system stability.
+This project demonstrates a hybrid autonomous driving system that integrates classical planning and reinforcement learning. It shows that learning-based planners can significantly improve decision-making in complex, interaction-heavy environments while maintaining overall system stability.
