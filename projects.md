@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 
 ## Adaptive Robotic Foot
-[View Project](/portfolio/robotic-foot/)
+[View Project]({{ site.baseurl }}/robotic-foot/)
 
 ## CARLA Autonomous Driving
 Coming soon
