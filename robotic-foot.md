@@ -132,3 +132,5 @@ This project demonstrates a complete robotics system integrating:
 - Machine learning  
 
 It highlights how intelligent sensing can enhance physical system performance in real-world environments.
+
+<a href="/portfolio/assets/files/Bio_inspired_Robot_Final_Report.pdf" target="_blank" class="btn btn--primary">View Full Report</a>
