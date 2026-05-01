@@ -23,13 +23,13 @@ My projects span reinforcement learning for autonomous driving, state estimation
 
 - **Adaptive Robotic Foot**  
   Terrain-adaptive system integrating mechanical design, acoustic sensing, and machine learning.
-
+  <img src="/portfolio/assets/images/Bio/f1.png" width="700">
 - **RL-Based Autonomous Driving (CARLA)**  
   PPO-based local planner for interactive driving scenarios.
-
+  <img src="/portfolio/assets/images/Carla/trajectory.png" width="700">
 - **EKF-SLAM Vehicle Control**  
   Closed-loop system combining perception and control under noisy sensing.
-
+  <img src="/portfolio/assets/images/LQR/webot_overr.png" width="700">
 ---
 
 ## Skills
