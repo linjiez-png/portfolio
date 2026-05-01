@@ -5,7 +5,7 @@ permalink: /projects/
 ---
 
 ## Adaptive Robotic Foot
-[View Project]({{ site.baseurl }}/robotic-foot/)
+[View Project](https://linjiez-png.github.io/portfolio/robotic-foot/)
 
 ## CARLA Autonomous Driving
 Coming soon
