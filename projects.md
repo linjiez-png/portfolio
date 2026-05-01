@@ -4,8 +4,6 @@ title: "Projects"
 permalink: /projects/
 ---
 
-# Projects
-
 ## Adaptive Robotic Foot
 [View Project](/portfolio/robotic-foot/)
 
