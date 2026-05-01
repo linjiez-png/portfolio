@@ -10,8 +10,8 @@ permalink: /projects/
 ## RL-Based Autonomous Driving in CARLA
 [View Project](https://linjiez-png.github.io/portfolio/carla/)
 
-## Autonomous Vehicle Control
-Coming soon
+## EKF-SLAM Vehicle Control
+[View Project]({{ site.baseurl }}/p4-slam-control/)
 
-## FIFA Data Platform
-Coming soon
+## Autonomous Fish Feeder
+[View Project]({{ site.baseurl }}/fish-feeder/)
