@@ -1,10 +1,8 @@
 ---
 layout: single
-title: "Surface-Adaptive Robotic Foot"
+title: "# Surface-Adaptive Robotic Foot with Acoustic Terrain Classification"
 permalink: /robotic-foot/
 ---
-
-# Surface-Adaptive Robotic Foot with Acoustic Terrain Classification
 
 <a href="/portfolio/assets/files/Bio_inspired_Robot_Final_Report.pdf" target="_blank" class="btn btn--primary">View Full Report</a>
 
