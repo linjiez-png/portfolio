@@ -7,8 +7,8 @@ permalink: /projects/
 ## Adaptive Robotic Foot
 [View Project](https://linjiez-png.github.io/portfolio/robotic-foot/)
 
-## CARLA Autonomous Driving
-Coming soon
+## RL-Based Autonomous Driving in CARLA
+[View Project](https://linjiez-png.github.io/portfolio/carla/)
 
 ## Autonomous Vehicle Control
 Coming soon
