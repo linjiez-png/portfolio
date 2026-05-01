@@ -11,6 +11,8 @@ Legged robots often suffer reduced mobility on mixed terrains due to non-adaptiv
 
 The system integrates mechanical design, sensing, and machine learning to improve locomotion performance across wood, wet acrylic, and gravel surfaces. :contentReference[oaicite:0]{index=0}
 
+[📄 Download Full Report](assets/files/Bio_inspired_Robot_Final_Report.pdf)
+
 ---
 
 ## System Design
