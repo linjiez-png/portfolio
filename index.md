@@ -1,23 +1,51 @@
 ---
-layout: home
-title: "Linjie Zhang"
+layout: single
+title: "About"
+permalink: /
+---
+
+## Linjie Zhang
+
+Mechanical Engineering (M.S.)  
+Focus: Robotics, Control, and Machine Learning
+
 ---
 
 ## About Me
 
-I am a Mechanical Engineering student at Carnegie Mellon University focusing on robotics, control systems, and machine learning.
+I work at the intersection of robotics, control, and machine learning, with a focus on building systems that interact reliably with real-world environments.
 
-My work centers on building integrated systems combining mechanical design, sensing, and intelligent decision-making.
+My projects span reinforcement learning for autonomous driving, state estimation and control (EKF-SLAM), acoustic-based terrain classification for legged robots, and data-driven pipelines for large-scale analytics. I am particularly interested in combining model-based control with learning-based methods to improve robustness and performance in safety-critical systems.
 
 ---
 
-## Featured Projects
+## Selected Work
 
-### Adaptive Robotic Foot
-A terrain-adaptive robotic system with acoustic classification and automatic sole switching.
+- **Adaptive Robotic Foot**  
+  Terrain-adaptive system integrating mechanical design, acoustic sensing, and machine learning.
 
-### CARLA Autonomous Driving
-RL-based local planning combining PPO and A*.
+- **RL-Based Autonomous Driving (CARLA)**  
+  PPO-based local planner for interactive driving scenarios.
 
-### Autonomous Vehicle Control
-LQR + PID based trajectory tracking system.
+- **EKF-SLAM Vehicle Control**  
+  Closed-loop system combining perception and control under noisy sensing.
+
+---
+
+## Skills
+
+**Robotics & Control**  
+State Estimation (EKF), PID, LQR, Trajectory Planning  
+
+**Machine Learning**  
+PyTorch, Reinforcement Learning, Feature Engineering  
+
+**Systems & Tools**  
+Python, PySpark, PostgreSQL, SolidWorks, Git  
+
+---
+
+## Contact
+
+Email: linjiez@andrew.cmu.edu  
+GitHub: https://github.com/linjiez-png
