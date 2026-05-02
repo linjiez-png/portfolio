@@ -10,138 +10,99 @@ permalink: /fish-feeder/
 
 ## Overview
 
-This project develops a **low-cost, battery-powered autonomous fish feeder** designed for high-humidity laboratory environments.
+This project develops a **low-cost, battery-powered autonomous fish feeder** for high-humidity laboratory environments.
 
-Conventional feeders fail in these settings due to:
-- condensation and corrosion
-- bulky size for small tanks
-- high cost and maintenance requirements  
+Conventional feeders often fail in these conditions due to moisture-induced corrosion, feed clumping, and unreliable dispensing. This system addresses these issues through a **compact, modular, and moisture-resistant design**, enabling consistent feeding for sensitive fish research applications.
 
-This system addresses these issues through a **compact, modular, and moisture-resistant design**, enabling reliable daily feeding for research applications involving sensitive fish species.
-
----
-
-## Design Requirements
-
-Key constraints defined by the Fish Conservation Physiology Lab:
-
-- Operate in **near 100% humidity environments** :contentReference[oaicite:0]{index=0}  
-- Fully **sanitizable and corrosion-resistant materials**  
-- **Battery-powered operation (24h minimum)**  
-- Compact size for **small tanks (~2 ft diameter)**  
-- Support **microdiet feed sizes (920–1800 µm)**  
-- Cost under **$250**  
+<p align="center">
+  <img src="/portfolio/assets/images/Fish Feeder/fish_over.png" width="700">
+</p>
 
 ---
 
-## System Architecture
+## My Contribution
 
-The system consists of three subsystems:
-
-- **Food Storage & Screw Transport**
-- **Motor & Power System**
-- **Control Interface (OLED + Buttons)**  
-
-<img src="/portfolio/assets/images/feeder_arch.png" width="700">
-
-Food is dispensed using a **motor-driven screw mechanism**, enabling controlled mass delivery over time.
+- Designed and assembled the **mechanical structure** of the feeder system  
+- Developed the **screw-based dispensing mechanism** for controlled feed output  
+- Integrated motor, battery, and enclosure into a compact system  
+- Assisted in system testing under high-humidity conditions  
+- Analyzed performance issues related to feed clumping and dispensing variability  
 
 ---
 
-## Mechanical Design
+## System Design
 
-- 3D-printed structural components (PETG)
-- Stainless steel fasteners for corrosion resistance
-- Modular housing for easy cleaning and maintenance  
+The system consists of three main subsystems:
 
-Prototype specifications:
+- **Food Storage & Screw Transport**  
+- **Motor & Power System**  
+- **User Interface (OLED + Button Control)**  
+
+Feed is dispensed using a **motor-driven screw mechanism**, allowing controlled and repeatable delivery over time.
+
+<p align="center">
+  <img src="/portfolio/assets/images/Fish Feeder/fish_mount.png" width="600">
+</p>
+
+---
+
+## Mechanical and Electrical Design
+
+- 3D-printed components (PETG) for corrosion resistance  
+- Stainless steel fasteners for high-humidity durability  
+- Modular enclosure for easy cleaning and maintenance  
+
+System specifications:
 
 - Size: 18.2 × 11 × 18.8 cm  
-- Weight: 751 g :contentReference[oaicite:1]{index=1}  
-
-<img src="/portfolio/assets/images/feeder_prototype.png" width="650">
-
----
-
-## Control System
-
-### Power
-
-- Two battery packs (6V each, AA-based)
-- Fully off-grid operation (no external power)
-
-### User Interface
-
-- OLED display
-- Two-button control:
-  - ON/OFF + manual dispense
-  - Feed amount selection (1–100 g)
+- Weight: ~750 g  
+- Fully battery-powered (off-grid operation)  
 
 ---
 
-## Testing and Evaluation
+## Testing and Results
 
-### 1. Short-Term Functional Test
+### Functional and Environmental Testing
 
-- 2-minute accelerated test simulating 24-hour operation  
-- System successfully distributes feed across intervals  
-- Minor issue: first interval skipped (non-critical)
+<p align="center">
+  <img src="/portfolio/assets/images/Fish Feeder/fish_test.png" width="700">
+</p>
 
----
+- Successfully operated in **near 100% humidity environments**  
+- Maintained structural integrity with **no corrosion observed**  
+- Demonstrated reliable feeding across repeated cycles  
 
-### 2. Corrosion Resistance Test
+### Real Feeding Performance
 
-- 120 hours at 25°C, 100% humidity  
-- No rust or oxidation observed on stainless steel components :contentReference[oaicite:2]{index=2}  
-
----
-
-### 3. Real Environment Feeding Test
-
-| Day | Target (g) | Dispensed (g) | Result |
-|-----|-----------|--------------|--------|
-| 1   | 20        | 17.4         | OK     |
-| 2   | 20        | 14.5         | OK     |
-| 3   | 20        | 2.5          | Error  |
-| 4   | 20        | 15.5         | OK     |
-| 5   | 20        | 25.0         | OK     |
+- Target: 20 g/day  
+- Observed variation due to humidity effects  
 
 Key observations:
 
-- Moisture causes **feed clumping**
-- Dispensing accuracy varies due to humidity effects
+- Moisture causes **feed aggregation and blockage**  
+- Dispensing accuracy varies under different humidity levels  
 - System remains functional but requires calibration  
 
 ---
 
-## Key Engineering Insights
+## Key Insights
 
-- Humidity fundamentally changes material and flow behavior  
-- Mechanical dispensing systems are sensitive to **moisture-induced aggregation**  
-- Reliable operation requires both **mechanical design and environmental mitigation**  
-- Modular design significantly improves maintainability  
+- High-humidity environments significantly affect material behavior and flow dynamics  
+- Mechanical dispensing systems must account for **environment-induced variability**  
+- Reliability requires both **mechanical design and environmental mitigation strategies**  
+- Modular systems improve maintainability and adaptability  
 
 ---
 
 ## Limitations
 
-- Motor torque insufficient for loads >100 g  
-- Not fully airtight → moisture ingress over time  
-- Bulky battery system increases size and weight  
-- Limited long-term durability validation :contentReference[oaicite:3]{index=3}  
-
----
-
-## Future Work
-
-- Integrated PCB to reduce system size  
-- Improved sealing and moisture isolation  
-- Alternative materials or coatings for durability  
-- Mobile app for remote monitoring and control  
-- Long-term reliability testing under lab conditions  
+- Limited torque for larger feed loads  
+- Partial exposure to humidity allows gradual moisture ingress  
+- Battery system increases overall size  
+- Long-term durability not fully validated  
 
 ---
 
 ## Takeaway
 
-This project demonstrates a practical mechatronic system designed under real-world constraints, highlighting the interaction between **mechanical design, environmental effects, and system reliability** in autonomous hardware systems.
+This project demonstrates a practical mechatronic system designed under real-world constraints. It highlights how environmental conditions influence system performance and emphasizes the importance of integrating mechanical design, actuation, and reliability considerations in autonomous hardware systems.
