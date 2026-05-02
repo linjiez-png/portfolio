@@ -45,7 +45,7 @@ The system follows a hybrid autonomy pipeline:
 - **Controller**: fixed PID controller for trajectory tracking  
 
 <p align="center">
-  <img src="/portfolio/assets/images/carla/carla_arch.png" width="700">
+  <img src="/portfolio/assets/images/Carla/carla_arch.png" width="700">
 </p>
 
 This design isolates improvements at the planning level without modifying control behavior.
@@ -77,7 +77,7 @@ The PPO planner:
 - Is anchored to the global route  
 
 <p align="center">
-  <img src="/portfolio/assets/images/carla/trajectory.png" width="600">
+  <img src="/portfolio/assets/images/Carla/trajectory.png" width="600">
 </p>
 
 ---
@@ -87,7 +87,7 @@ The PPO planner:
 ### Highway Merge Performance
 
 <p align="center">
-  <img src="/portfolio/assets/images/carla/success_rate.png" width="600">
+  <img src="/portfolio/assets/images/Carla/success_rate.png" width="600">
 </p>
 
 | Method | Success Rate | Crash Rate | P90 Time | P90 Jerk |
