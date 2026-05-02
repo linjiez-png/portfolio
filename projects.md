@@ -43,5 +43,5 @@ Humidity-resistant autonomous feeding system designed for real-world laboratory 
 ### Aircraft CAD Design  
 [View Project](https://linjiez-png.github.io/portfolio/aircraft-cad/)  
 Multi-part SolidWorks assembly featuring complex geometry and aerodynamic component design.
-<img src="/portfolio/assets/images/CAD/cad_over.png" width="500">
+<img src="/portfolio/assets/images/CAD/cad_overr.png" width="500">
 ---
